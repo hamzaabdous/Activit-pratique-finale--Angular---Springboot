@@ -1,0 +1,37 @@
+<div class="p-3">
+  <div class="parent">
+    <div class="div1">
+      <img src="../../assets/pictures/20547283_6310507.jpg" alt="" srcset="">
+    </div>
+    <div class="div2">
+      <div class="card">
+        <div class="card-header">Authentication</div>
+        <div class="card-body">
+          <form [formGroup]="formLogin" (ngSubmit)="handleLogin()">
+            <div *ngIf="!loginValid" class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Login not valid !</strong> Your password is incorrect or this account doesn’t exist
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="username"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                formControlName="password"
+              />
+            </div>
+            <button class="bt btn-success">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
